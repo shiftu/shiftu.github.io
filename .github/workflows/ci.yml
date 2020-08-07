@@ -43,6 +43,9 @@ jobs:
         # 保存图片缓存
         cd ..
         cp ./Maverick/cached_imgs/sizeinfo.json ./build_cache
+        cat>./dist/CNAME<<EOF
+        chenglin.cc
+        EOF
     - name: Deploy to GitHub Pages
       uses: docker://peaceiris/gh-pages:v2
       env:
